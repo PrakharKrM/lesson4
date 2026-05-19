@@ -22,6 +22,6 @@ jobs:
         shell: python
         run: | 
           import datetime
-	  import netmiko
+          import netmiko
           print("Printing current time using python ")
           print(datetime.datetime.now())
