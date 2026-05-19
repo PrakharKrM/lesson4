@@ -17,6 +17,12 @@ jobs:
   Second_job_python:
     runs-on: windows-latest
     steps:
+      - name: Install dependency
+        id: step1_install
+        shell: powershell
+        run: |
+          pip install netmiko
+          
       - name: Now i am runnig python
         id: step2_python
         shell: python
