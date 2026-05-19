@@ -1,0 +1,26 @@
+name: First simple GitHub action Workflow
+on:
+  push:
+      branches: ['main']
+  workflow_dispatch:
+
+jobs:
+  First_Job_bash:
+    runs-on: ubuntu-latest
+    steps:
+      - name: My first step
+        id: step1
+        run: |
+          echo "Hey i executed my first step"
+          echo " DO you like to execute second step"
+
+  Second_job_python:
+    runs-on: windows-latest
+    steps:
+      - name: Now i am runnig python
+        id: step2_python
+        shell: python
+        run: | 
+          import datetime
+          print("Printing current time using python ")
+          print(datetime.datetime.now())
